@@ -350,13 +350,13 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ template, isVisible }) =>
       
       let progressStep = 0;
       const progressInterval = setInterval(() => {
-        progressStep += 20; // Increment by 20% each step
+        progressStep += 1; // Increment by 1% each step
         setProgress(progressStep);
         
         if (progressStep >= 100) {
           clearInterval(progressInterval);
         }
-      }, 600); // Same interval as loading text (600ms)
+      }, 30); // 30ms interval for smooth 1% increments (3000ms total / 100 steps = 30ms per step)
       
       return () => clearInterval(progressInterval);
     } else {
