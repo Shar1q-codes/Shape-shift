@@ -348,21 +348,17 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ template, isVisible }) =>
     if (isVisible) {
       setProgress(0);
       
-      const startTime = Date.now();
-      const duration = 3000;
-      
-      const updateProgress = () => {
-        const elapsed = Date.now() - startTime;
-        const newProgress = Math.min((elapsed / duration) * 100, 100);
+      let progressStep = 0;
+      const progressInterval = setInterval(() => {
+        progressStep += 20; // Increment by 20% each step
+        setProgress(progressStep);
         
-        setProgress(newProgress);
-        
-        if (newProgress < 100) {
-          requestAnimationFrame(updateProgress);
+        if (progressStep >= 100) {
+          clearInterval(progressInterval);
         }
-      };
+      }, 600); // Same interval as loading text (600ms)
       
-      requestAnimationFrame(updateProgress);
+      return () => clearInterval(progressInterval);
     } else {
       setProgress(0);
     }
