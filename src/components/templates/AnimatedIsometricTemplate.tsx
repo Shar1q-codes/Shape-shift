@@ -47,12 +47,12 @@ const AnimatedIsometricTemplate: React.FC = () => {
       for (let y = 0; y < 8; y++) {
         initialBlocks.push({
           id: `base-${blockId++}`,
-          x: x * 60,
-          y: y * 60,
+          x: x * 50,
+          y: y * 50,
           z: 0,
-          width: 60,
+          width: 50,
           height: 20,
-          depth: 60,
+          depth: 50,
           color: '#e5e7eb',
           type: 'decoration'
         });
@@ -62,12 +62,12 @@ const AnimatedIsometricTemplate: React.FC = () => {
     // Personal info tower (central prominent block)
     initialBlocks.push({
       id: 'info-tower',
-      x: 120,
-      y: 120,
+      x: 100,
+      y: 100,
       z: 20,
-      width: 120,
+      width: 100,
       height: 200,
-      depth: 120,
+      depth: 100,
       color: '#3b82f6',
       content: 'Personal Info',
       type: 'info',
@@ -76,16 +76,16 @@ const AnimatedIsometricTemplate: React.FC = () => {
 
     // Project blocks (varying heights and positions)
     projects.forEach((project, index) => {
-      const x = 300 + (index % 3) * 140;
-      const y = 60 + Math.floor(index / 3) * 140;
+      const x = 250 + (index % 3) * 120;
+      const y = 50 + Math.floor(index / 3) * 120;
       initialBlocks.push({
         id: `project-${index}`,
         x,
         y,
         z: 20,
-        width: 120,
+        width: 100,
         height: 80 + Math.random() * 60,
-        depth: 120,
+        depth: 100,
         color: ['#ef4444', '#f59e0b', '#10b981', '#8b5cf6'][index % 4],
         content: project.title,
         type: 'project',
@@ -101,8 +101,8 @@ const AnimatedIsometricTemplate: React.FC = () => {
     }, {} as Record<string, typeof skills>);
 
     Object.entries(skillCategories).forEach(([category, categorySkills], index) => {
-      const x = 60 + index * 120;
-      const y = 360;
+      const x = 50 + index * 100;
+      const y = 300;
       const avgLevel = categorySkills.reduce((sum, skill) => sum + skill.level, 0) / categorySkills.length;
       
       initialBlocks.push({
@@ -110,9 +110,9 @@ const AnimatedIsometricTemplate: React.FC = () => {
         x,
         y,
         z: 20,
-        width: 100,
+        width: 80,
         height: 40 + (avgLevel / 100) * 120,
-        depth: 100,
+        depth: 80,
         color: ['#06b6d4', '#8b5cf6', '#f59e0b', '#ef4444', '#10b981'][index % 5],
         content: category.replace('-', ' ').toUpperCase(),
         type: 'skill',
@@ -138,8 +138,8 @@ const AnimatedIsometricTemplate: React.FC = () => {
         
         // Subtle camera movement based on mouse position
         setCameraAngle({
-          x: 30 + y * 10,
-          y: 45 + x * 15
+          x: 30 + y * 3,
+          y: 45 + x * 5
         });
       }
     };
@@ -174,8 +174,8 @@ const AnimatedIsometricTemplate: React.FC = () => {
     const isoY = (x + y) * Math.sin(radY) - z * Math.sin(radX);
     
     return {
-      x: isoX + 400,
-      y: isoY + 300
+      x: isoX + 600,
+      y: isoY + 400
     };
   };
 
@@ -200,6 +200,11 @@ const AnimatedIsometricTemplate: React.FC = () => {
       animatedZ = block.z + Math.cos(animationPhase + block.y * 0.01) * 5;
     }
 
+    // Scale factor for better visibility
+    const scale = 0.8;
+    const scaledWidth = block.width * scale;
+    const scaledDepth = block.depth * scale;
+
     return (
       <g
         key={block.id}
@@ -212,7 +217,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
       >
         {/* Block faces - Top face */}
         <polygon
-          points={`0,0 ${block.width * 0.5},${-block.depth * 0.25} ${block.width * 0.5 - block.width},${-block.depth * 0.25 + block.depth * 0.5} ${-block.width * 0.5},${block.depth * 0.25}`}
+          points={`0,0 ${scaledWidth * 0.5},${-scaledDepth * 0.25} ${scaledWidth * 0.5 - scaledWidth},${-scaledDepth * 0.25 + scaledDepth * 0.5} ${-scaledWidth * 0.5},${scaledDepth * 0.25}`}
           fill={block.color}
           stroke="#000"
           strokeWidth="1"
@@ -222,7 +227,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
         
         {/* Left face */}
         <polygon
-          points={`0,0 ${-block.width * 0.5},${block.depth * 0.25} ${-block.width * 0.5},${block.depth * 0.25 + animatedHeight * 0.5} 0,${animatedHeight * 0.5}`}
+          points={`0,0 ${-scaledWidth * 0.5},${scaledDepth * 0.25} ${-scaledWidth * 0.5},${scaledDepth * 0.25 + animatedHeight * 0.5} 0,${animatedHeight * 0.5}`}
           fill={block.color}
           stroke="#000"
           strokeWidth="1"
@@ -232,7 +237,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
         
         {/* Right face */}
         <polygon
-          points={`0,0 ${block.width * 0.5},${-block.depth * 0.25} ${block.width * 0.5},${-block.depth * 0.25 + animatedHeight * 0.5} 0,${animatedHeight * 0.5}`}
+          points={`0,0 ${scaledWidth * 0.5},${-scaledDepth * 0.25} ${scaledWidth * 0.5},${-scaledDepth * 0.25 + animatedHeight * 0.5} 0,${animatedHeight * 0.5}`}
           fill={block.color}
           stroke="#000"
           strokeWidth="1"
@@ -249,7 +254,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
             className="text-xs font-bold fill-white"
             style={{ 
               textShadow: '1px 1px 2px rgba(0,0,0,0.8)',
-              fontSize: block.type === 'info' ? '14px' : '10px'
+              fontSize: block.type === 'info' ? '12px' : '8px'
             }}
           >
             {block.content}
@@ -258,11 +263,11 @@ const AnimatedIsometricTemplate: React.FC = () => {
         
         {/* Type icon */}
         {block.type !== 'decoration' && (
-          <foreignObject x="-10" y={-animatedHeight * 0.5 - 20} width="20" height="20">
+          <foreignObject x="-8" y={-animatedHeight * 0.5 - 16} width="16" height="16">
             <div className="flex items-center justify-center w-full h-full">
-              {block.type === 'skill' && <Code className="w-4 h-4 text-white drop-shadow-lg" />}
-              {block.type === 'project' && <Box className="w-4 h-4 text-white drop-shadow-lg" />}
-              {block.type === 'info' && <Star className="w-4 h-4 text-white drop-shadow-lg" />}
+              {block.type === 'skill' && <Code className="w-3 h-3 text-white drop-shadow-lg" />}
+              {block.type === 'project' && <Box className="w-3 h-3 text-white drop-shadow-lg" />}
+              {block.type === 'info' && <Star className="w-3 h-3 text-white drop-shadow-lg" />}
             </div>
           </foreignObject>
         )}
@@ -333,8 +338,8 @@ const AnimatedIsometricTemplate: React.FC = () => {
       <div className="relative z-10 flex items-center justify-center py-10 sm:py-16 md:py-20 overflow-hidden">
         <svg
           width="100%"
-          height="600"
-          viewBox="0 0 800 600"
+          height="800"
+          viewBox="0 0 1200 800"
           className="max-w-full h-auto"
           style={{
             filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.1))'
@@ -451,7 +456,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
       )}
 
       {/* Controls panel */}
-      <div className="fixed top-3 sm:top-4 md:top-6 right-3 sm:right-4 md:right-6 z-30 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-200 dark:border-gray-700">
+      <div className="fixed top-20 sm:top-24 md:top-28 right-3 sm:right-4 md:right-6 z-30 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-200 dark:border-gray-700">
         <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">Isometric View</div>
         <div className="flex items-center space-x-2 text-xs">
           <Layers className="w-4 h-4" />
@@ -464,7 +469,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
       </div>
 
       {/* Legend */}
-      <div className="fixed bottom-3 sm:bottom-4 md:bottom-6 right-3 sm:right-4 md:right-6 z-30 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-200 dark:border-gray-700">
+      <div className="fixed bottom-20 sm:bottom-24 md:bottom-28 right-3 sm:right-4 md:right-6 z-30 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-200 dark:border-gray-700">
         <div className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Legend</div>
         <div className="space-y-2 text-xs">
           <div className="flex items-center space-x-2">
