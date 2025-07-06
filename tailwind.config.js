@@ -24,9 +24,9 @@ export default {
         'neumorphism-pressed': 'inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff',
         
         // Neumorphism dark mode shadows
-        'neumorphism-dark': '8px 8px 16px #1a1a1a, -8px -8px 16px #2a2a2a',
-        'neumorphism-inset-dark': 'inset 8px 8px 16px #1a1a1a, inset -8px -8px 16px #2a2a2a',
-        'neumorphism-pressed-dark': 'inset 4px 4px 8px #1a1a1a, inset -4px -4px 8px #2a2a2a',
+        'neumorphism-dark': '12px 12px 24px #0f0f0f, -12px -12px 24px #3f3f3f, 0 0 0 1px rgba(255, 255, 255, 0.05)',
+        'neumorphism-inset-dark': 'inset 12px 12px 24px #0f0f0f, inset -12px -12px 24px #3f3f3f, inset 0 0 0 1px rgba(255, 255, 255, 0.1)',
+        'neumorphism-pressed-dark': 'inset 8px 8px 16px #0a0a0a, inset -8px -8px 16px #2a2a2a, inset 0 0 0 1px rgba(255, 255, 255, 0.05)',
         
         // Inner shadow variations
         'inner-lg': 'inset 0 10px 15px -3px rgba(0, 0, 0, 0.1), inset 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
