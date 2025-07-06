@@ -1,0 +1,35 @@
+/**
+ * TypeScript Configuration for Node.js
+ * 
+ * This file configures TypeScript compiler options specifically for
+ * Node.js-related files like the Vite configuration. It uses different
+ * settings optimized for Node.js environment rather than browser.
+ */
+
+{
+  "compilerOptions": {
+    // JavaScript language level for generated code
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    
+    // Module settings
+    "module": "ESNext",
+    
+    // Skip type checking of declaration files
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["vite.config.ts"]
+}

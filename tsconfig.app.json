@@ -1,0 +1,39 @@
+/**
+ * TypeScript Configuration for Application
+ * 
+ * This file configures TypeScript compiler options for the application code.
+ * It sets target ECMAScript version, module settings, and various type checking
+ * and compilation options for optimal development experience.
+ */
+
+{
+  "compilerOptions": {
+    // JavaScript language level for generated code
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    
+    // Libraries to include in compilation
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    
+    // Module settings
+    "module": "ESNext",
+    
+    // Skip type checking of declaration files
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
+}

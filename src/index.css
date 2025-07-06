@@ -1,0 +1,10 @@
+/**
+ * Main CSS file
+ * 
+ * This file imports Tailwind CSS directives for the base styles,
+ * component classes, and utility classes used throughout the application.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
