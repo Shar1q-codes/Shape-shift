@@ -174,8 +174,8 @@ const AnimatedIsometricTemplate: React.FC = () => {
     const isoY = (x + y) * Math.sin(radY) - z * Math.sin(radX);
     
     return {
-      x: isoX + 600,
-     y: isoY + 100
+      x: isoX + 500,
+      y: isoY + 150
     };
   };
 
@@ -338,7 +338,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
       <div className="relative z-10 flex items-center justify-center py-0">
         <svg
           width="100%"
-          viewBox="0 0 1200 800"
+          viewBox="0 0 1000 700"
           className="max-w-full h-auto"
           style={{
             filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.1))'
