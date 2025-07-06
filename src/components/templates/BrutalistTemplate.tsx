@@ -70,7 +70,6 @@ const BrutalistTemplate: React.FC = () => {
         </div>
 
         <div className="relative z-10 max-w-none px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
-        <div className="relative z-10 max-w-none px-4 sm:px-6 md:px-8 pt-20 sm:pt-16 md:pt-20 pb-8 sm:pb-12 md:pb-16">
           {/* Brutal Typography */}
           <div className="text-center mb-8">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-4 transform -skew-x-6 sm:-skew-x-12 text-black drop-shadow-[4px_4px_0px_#ff0000] sm:drop-shadow-[6px_6px_0px_#ff0000] md:drop-shadow-[8px_8px_0px_#ff0000]">
