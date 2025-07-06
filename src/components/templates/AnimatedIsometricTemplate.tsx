@@ -175,7 +175,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
     
     return {
       x: isoX + 600,
-      y: isoY + 400
+     y: isoY + 100
     };
   };
 
@@ -335,7 +335,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
       </header>
 
       {/* Isometric World - Main 3D visualization */}
-      <div className="relative z-10 flex items-center justify-center py-10 sm:py-16 md:py-20">
+      <div className="relative z-10 flex items-center justify-center py-0">
         <svg
           width="100%"
           viewBox="0 0 1200 800"
