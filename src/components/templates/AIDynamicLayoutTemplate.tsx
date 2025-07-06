@@ -329,7 +329,7 @@ const AIDynamicLayoutTemplate: React.FC = () => {
       {/* Dynamic Header - Adapts based on AI analysis */}
       <header 
         data-section="about"
-        className={`max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-1000 ${
+        className={`max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-16 md:pt-20 transition-all duration-1000 ${
           layoutState.layoutMode === 'minimal' ? 'py-12' : 
           layoutState.layoutMode === 'compact' ? 'py-16' : 'py-20'
         }`}

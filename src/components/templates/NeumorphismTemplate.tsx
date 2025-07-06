@@ -35,7 +35,7 @@ const NeumorphismTemplate: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
       {/* Header */}
-      <header className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+      <header className="max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20">
         <div className="text-center">
           {/* Neumorphic Profile Picture */}
           <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 sm:mb-8 bg-gray-200 dark:bg-gray-800 rounded-full shadow-neumorphism-inset dark:shadow-neumorphism-inset-dark flex items-center justify-center">

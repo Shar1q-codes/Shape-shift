@@ -102,7 +102,7 @@ const ExperimentalTemplate: React.FC = () => {
       <div className="relative z-10">
         {/* Intro Section */}
         {activeSection === 0 && (
-          <section className="min-h-screen flex items-center justify-center px-6">
+          <section className="min-h-screen flex items-center justify-center px-6 pt-20 sm:pt-0">
             <div className="text-center">
               <div className="mb-8">
                 <h1 className="text-8xl font-black mb-4 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent animate-pulse">

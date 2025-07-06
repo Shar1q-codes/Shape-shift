@@ -351,7 +351,7 @@ const TimeMachineModeTemplate: React.FC = () => {
       {/* Main Content */}
       <div className={`relative z-20 transition-all duration-1000 ${isTimeTravel ? 'blur-sm scale-105' : ''}`}>
         {/* Header */}
-        <header className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <header className="max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20">
           <div className="text-center">
             <div className="mb-8">
               <div className="flex items-center justify-center space-x-2 sm:space-x-4 mb-4 sm:mb-6">

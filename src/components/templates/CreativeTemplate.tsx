@@ -21,7 +21,7 @@ const CreativeTemplate: React.FC = () => {
       </div>
 
       {/* Creative Header */}
-      <header className="relative z-10 max-w-6xl mx-auto px-6 py-20">
+      <header className="relative z-10 max-w-6xl mx-auto px-6 pt-20 sm:pt-16 md:pt-20 pb-20">
         <div className="text-center">
           <div className="mb-8">
             <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">

@@ -127,7 +127,7 @@ const CyberpunkTemplate: React.FC = () => {
 
       {/* Cyberpunk Header */}
       <header className="relative z-30 border-b border-cyan-500 bg-black/90 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-6xl mx-auto px-6 pt-20 sm:pt-16 md:pt-20 pb-16">
           {/* Holographic Grid Background - Responsive */}
           <div className="absolute inset-0 opacity-20">
             <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 grid-rows-4 sm:grid-rows-6 md:grid-rows-8 h-full">

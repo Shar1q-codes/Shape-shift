@@ -143,7 +143,7 @@ const ParallaxTemplate: React.FC = () => {
       {/* Section 1: Landing */}
       <section
         ref={(el) => el && (sectionsRef.current[0] = el)}
-        className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 sm:px-6"
+        className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 px-4 sm:px-6 pt-20 sm:pt-0"
       >
         <div className="text-center text-white z-10 px-6">
           <div

@@ -311,7 +311,7 @@ const EscherGridTemplate: React.FC = () => {
       </div>
 
       {/* Control Panel */}
-      <div className="fixed top-2 sm:top-4 md:top-6 right-2 sm:right-4 md:right-6 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 shadow-2xl border border-gray-200 dark:border-gray-700 max-w-[calc(100%-1rem)] sm:max-w-xs">
+      <div className="fixed top-20 sm:top-24 md:top-28 right-2 sm:right-4 md:right-6 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 shadow-2xl border border-gray-200 dark:border-gray-700 max-w-[calc(100%-1rem)] sm:max-w-xs">
         <div className="flex items-center space-x-2 sm:space-x-3 mb-2 sm:mb-4">
           <div className="p-2 sm:p-3 bg-gradient-to-r from-gray-600 to-slate-700 rounded-lg sm:rounded-xl">
             <Hexagon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -354,7 +354,7 @@ const EscherGridTemplate: React.FC = () => {
       </div>
 
       {/* Header */}
-      <header className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+      <header className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20">
         <div className="text-center">
           <div className="mb-8">
             <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-gray-700 via-slate-600 to-gray-800 bg-clip-text text-transparent">

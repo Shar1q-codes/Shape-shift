@@ -22,7 +22,7 @@ const CorporateTemplate: React.FC = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
       {/* Professional Header */}
       <header className="bg-white dark:bg-gray-800 shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-6xl mx-auto px-6 pt-20 sm:pt-16 md:pt-20 pb-16">
           <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-12">
             {/* Professional Avatar */}
             <div className="flex-shrink-0">

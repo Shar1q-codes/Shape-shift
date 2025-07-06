@@ -46,7 +46,7 @@ const DarkTechTemplate: React.FC = () => {
       </div>
 
       {/* Header Section */}
-      <header className="max-w-6xl mx-auto px-6 py-16">
+      <header className="max-w-6xl mx-auto px-6 pt-20 sm:pt-16 md:pt-20 pb-16">
         <div className="text-center">
           <div className="mb-8">
             {/* Terminal-style commands */}

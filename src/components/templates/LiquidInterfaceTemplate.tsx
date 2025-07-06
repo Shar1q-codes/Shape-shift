@@ -230,7 +230,7 @@ const LiquidInterfaceTemplate: React.FC = () => {
         }}
       >
         {/* Header */}
-        <header className="max-w-6xl mx-auto px-6 py-20">
+        <header className="max-w-6xl mx-auto px-6 pt-20 sm:pt-16 md:pt-20 pb-20">
           <div className="text-center">
             {/* Liquid Avatar */}
             <div className="mb-12 relative">

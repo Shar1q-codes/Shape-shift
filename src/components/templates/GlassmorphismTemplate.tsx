@@ -46,7 +46,7 @@ const GlassmorphismTemplate: React.FC = () => {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+      <header className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20">
         {/* Glass card for header content */}
         <div className="backdrop-blur-md bg-white/20 dark:bg-gray-900/20 rounded-xl sm:rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12 border border-white/30 dark:border-gray-700/30 shadow-2xl">
           <div className="text-center">

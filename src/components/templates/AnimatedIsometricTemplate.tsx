@@ -297,7 +297,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
       </div>
 
       {/* Header with personal information */}
-      <header className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <header className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-16 md:pt-20 pb-8 sm:pb-12">
         <div className="text-center">
           <div className="mb-8">
             <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">

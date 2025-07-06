@@ -66,7 +66,7 @@ const TypographicTemplate: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       {/* Typographic Header */}
-      <header className="max-w-4xl mx-auto px-6 py-20">
+      <header className="max-w-4xl mx-auto px-6 pt-20 sm:pt-16 md:pt-20 pb-20">
         <div className="text-center space-y-8">
           {/* Large Display Name - Responsive */}
           <div className="space-y-4">

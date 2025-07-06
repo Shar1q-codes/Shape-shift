@@ -21,7 +21,7 @@ const MinimalistTemplate: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-light">
       {/* Header - Simple and centered */}
-      <header className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+      <header className="max-w-6xl mx-auto px-4 sm:px-6 pt-20 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl font-thin tracking-wide mb-4">
             {personalInfo.name}

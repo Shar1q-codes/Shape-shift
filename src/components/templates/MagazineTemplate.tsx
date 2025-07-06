@@ -97,7 +97,7 @@ const MagazineTemplate: React.FC = () => {
 
       {/* Hero Section - Magazine Cover Style */}
       <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto px-6 pt-20 sm:pt-16 md:pt-20 pb-16">
           <div className="grid grid-cols-12 gap-8">
             {/* Main Feature */}
             <div className="col-span-12 lg:col-span-8">

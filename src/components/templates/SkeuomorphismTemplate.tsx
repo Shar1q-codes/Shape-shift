@@ -47,7 +47,7 @@ const SkeuomorphismTemplate: React.FC = () => {
           backgroundSize: '30px 30px, 25px 25px, 40px 40px'
         }}></div>
         
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-5 md:px-6 py-10 sm:py-16 md:py-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-5 md:px-6 pt-20 sm:pt-16 md:pt-20 pb-10 sm:pb-16 md:pb-20">
           <div className="text-center">
             {/* Embossed Profile Picture Frame */}
             <div className="mb-8 relative">
