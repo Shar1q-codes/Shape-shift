@@ -278,10 +278,10 @@ const AnimatedIsometricTemplate: React.FC = () => {
   return (
     <div 
       ref={containerRef}
-      className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-orange-100 dark:from-purple-950 dark:via-pink-950 dark:to-orange-950 overflow-hidden relative"
+      className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-orange-100 dark:from-purple-950 dark:via-pink-950 dark:to-orange-950 relative"
     >
       {/* Floating particles for ambient effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
+      <div className="absolute inset-0 pointer-events-none hidden sm:block">
         {Array(20).fill(0).map((_, i) => (
           <div
             key={i}
@@ -335,10 +335,9 @@ const AnimatedIsometricTemplate: React.FC = () => {
       </header>
 
       {/* Isometric World - Main 3D visualization */}
-      <div className="relative z-10 flex items-center justify-center py-10 sm:py-16 md:py-20 overflow-hidden">
+      <div className="relative z-10 flex items-center justify-center py-10 sm:py-16 md:py-20">
         <svg
           width="100%"
-          height="800"
           viewBox="0 0 1200 800"
           className="max-w-full h-auto"
           style={{
