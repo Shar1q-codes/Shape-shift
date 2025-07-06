@@ -363,7 +363,7 @@ const AnimatedIsometricTemplate: React.FC = () => {
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white">Personal Information</h3>
                     </div>
                     <div className="space-y-2 text-sm">
-                      <p><span className="font-semibold">Name:</span> {tile.data?.name}</p>
+                      <p><span className="font-semibold">Name:</span> {block.data?.name}</p>
                       <p><span className="font-semibold">Title:</span> {block.data.title}</p>
                       <p><span className="font-semibold">Location:</span> {block.data.location}</p>
                       <p className="mt-3 text-gray-700 dark:text-gray-300">{block.data.bio}</p>
